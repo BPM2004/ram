@@ -1,10 +1,10 @@
-pipeline{
+pipeline {
 	agent any
-	tools{
+	tools {
 		gradle 'Gradle'
 		jdk 'JDK'
 	}
-	stages{
+	stages {
 		stage('Checkout'){
 			steps{
 				git branch:'master',url:'https://github.com/BPM2004/ram.git'
@@ -26,7 +26,7 @@ pipeline{
 			}
 		}
 	}
-	post{
+	post {
 		success{
 			echo 'Build sucess'
 		}
